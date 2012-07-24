@@ -1,3 +1,7 @@
+---
+layout: default
+title: khamer.github.com
+---
 khamer.github.com
 =================
 This isn't the best page to find me on. You should checkout
