@@ -170,7 +170,6 @@ p {
 }
 
 blockquote {
-	color: #34b159;
 	font-family: 'Fjord One', Georgia, serif;
 	font-style: italic;
 	font-size: 1.2em;
@@ -178,7 +177,6 @@ blockquote {
 }
 	blockquote p:last-child {
 		margin-bottom: 0;
-		color: #333;
 	}
 
 dfn {
