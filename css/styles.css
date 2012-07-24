@@ -472,18 +472,24 @@ caption {
    Common Blocks
    ========================================================================== */
 
-.header {
+.header h1 a {
+	color: #333;
+	font-size: 2em;
 }
+	.header h1 a:hover {
+		color: #F2006D;
+	}
+
 .torso {
 	padding: 40px 0;
 }
+
 .footer {
 	background-color: #282828;
 	color: #FAFAFA;
 	margin-top: 100px;
 	padding: 30px 0;
 }
-
 
 .highlight {
 	color: #181818;
