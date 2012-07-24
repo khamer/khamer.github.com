@@ -472,12 +472,25 @@ caption {
    Common Blocks
    ========================================================================== */
 
-.header h1 a {
-	color: #333;
+.header h1 {
 	font-size: 2em;
 }
-	.header h1 a:hover {
+
+.header a {
+	color: #333;
+}
+	.header a:hover {
 		color: #F2006D;
+	}
+
+.nav_primary {
+	position: absolute;
+	bottom: -1em;
+	right: 0;
+}
+	.nav_primary a {
+		display: inline-block;
+		padding: 1em;
 	}
 
 .torso {
