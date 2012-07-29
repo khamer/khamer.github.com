@@ -1,23 +1,31 @@
-/* ===========================================================================
-   Web fonts
-   ========================================================================== */
-@import url(http://fonts.googleapis.com/css?family=Fjord+One);
+/* = Table of Contents =====================================================
+ * 1. Web Fonts
+ * 2. Reset
+ * 3. Headings
+ * 4. Typography
+ * 5. Links
+ * 6. Lists
+ * 7. Embedded Content
+ * 8. Tables
+ * 9. Layout
+ * 10. Messaging
+ * 11. Non-semantic Classes
+ * 12. Forms
+ * 13. Print Styles
+/* ========================================================================= */
 
-/* ===========================================================================
-   Reset
-   ========================================================================== */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
+/* = 1. Web Fonts ========================================================== */
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+
+
+/* = 2. Reset ============================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i,
+center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption,
+tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption,
+figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio,
+video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -27,28 +35,27 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav,
+section, summary {
 	display: block;
 }
 
 audio, canvas, video {
-    display: inline-block;
-    *display: inline;
-    *zoom: 1;
+	display: inline-block;
+}
+
+html.lt-ie8 {
+	display: inline;
+	zoom: 1;
 }
 
 audio:not([controls]) {
-    display: none;
+	display: none;
 }
 
-/* =============================================================================
-   Base
-   ========================================================================== */
-
 html {
-    font-size: 100%;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
 	background: #fff;
 }
 
@@ -57,145 +64,128 @@ body {
 	min-width: 480px;
 	margin: 0 auto;
 	padding: 1em;
-	font-size: 1em;
+	font-size: 16px;
 	line-height: 1.4;
 }
-html,
-button,
-input[type=text],
-input[type=password],
-textarea,
-select {
-	font-family: Helvetica, arial, sans-serif;
-	color: #333;
+
+html.lt-ie7 body {
+	width: 920px;
 }
 
-
-/*
- * Remove text-shadow in selection highlight: h5bp.com/i
- * These selection declarations have to be separate.
- * Customize the background color to match your design.
- */
+blockquote, html, button, input[type=text], input[type=password], textarea, select, caption {
+	font-family: 'Ubuntu', 'Trebuchet MS', arial, sans-serif;
+	background: #111;
+	color: #eee;
+}
 
 ::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
+	background: #433;
+	text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
-    text-shadow: none;
+	background: #433;
+	text-shadow: none;
 }
 
-/* =============================================================================
-   Headers
-   ========================================================================== */
+
+/* = 3. Headings =========================================================== */
 
 h1, h2, h3, h4, h5, h6 {
-	color: #F2006D;
-	font-family: 'Fjord One', Georgia, serif;
-	font-weight: normal;
+	color: #e33;
+	font-family: 'Ubuntu Light', 'Ubuntu', 'Trebuchet MS', arial, sans-serif;
+	font-weight: 300;
 	line-height: 1.3;
 	margin: 0 0 1em;
 }
 h1 {
-	font-size: 3em;  /* 48px / 16px */
+	font-size: 3.25em; /* 52px / 16px */
 }
 h2 {
-	font-size: 1.5em; /* 24px / 16px */
+	font-size: 2.25em; /* 36px / 16px */
 }
 h3 {
-	font-size: 1.3125em; /* 21px / 16px */
+	font-size: 1.5em; /* 24px / 16px */
 }
 h4 {
 	font-size: 1.125em; /* 18px / 16px */
 }
-h5,
-h6 {
+h5, h6 {
 	font-size: 1em;
 }
 
 
-/* =============================================================================
-   Links
-   ========================================================================== */
-
-a:link {
-	color: #0096D2;
-	text-decoration: none;
-}
-
-a:visited {
-	color: #00587B;
-}
-
-a:hover,
-a:active {
-	color: #F2006D;
-}
-
-a:focus {
-    outline: thin dotted;
-}
-
-a:hover,
-a:active {
-    outline: 0;
-}
-
-
-/* =============================================================================
-   Typography
-   ========================================================================== */
+/* = 4. Typography ========================================================= */
 
 abbr[title],
 acronym[title] {
-    border-bottom: 1px dotted;
+	border-bottom: 1px dotted;
 }
 
 b,
 strong {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 blockquote,
 pre {
 	clear: both;
-	padding: 0 20px;
-	margin: 20px 0 20px 40px;
+	padding-left: .5em;
+	margin: 2em 0 2em .5em;
+}
+	blockquote {
+		font-style: italic;
+		font-size: 1.25em;
+		border-left: 1em solid #000;
+	}
+		blockquote p {
+			margin: 1em 0;
+		}
+pre {
+	white-space: pre;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+
+code {
+	padding: 0.2em;
+}
+
+pre, code, tt, kbd, samp {
+	font-family: Monaco, 'Ubuntu Mono', Consolas, 'Courier New', monospace;
 }
 
 p {
-	margin: 20px 0;
+	margin: 1.5em 0;
 }
 
-blockquote {
-	font-family: 'Fjord One', Georgia, serif;
-	font-style: italic;
-	font-size: 1.2em;
-	border-left: 2px solid #818181;
+q {
+	quotes: none;
 }
-	blockquote p:last-child {
-		margin-bottom: 0;
-	}
+
+q:before,
+q:after {
+	content: "";
+	content: none;
+}
 
 dfn {
-    font-style: italic;
+	font-style: italic;
 }
 
 hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
+	display: block;
+	height: 1em;
+	border: 0;
+	background: #000;
+	width: 20em;
+	max-width: 80%;
 }
 
 ins {
-    background: #ff9;
-    color: #000;
-    text-decoration: none;
+	background: #ff9;
+	color: #000;
+	text-decoration: none;
 }
 
 del {
@@ -204,235 +194,94 @@ del {
 }
 
 mark {
-    background: #ff0;
-    color: #000;
-    font-style: italic;
-    font-weight: bold;
+	background: #ff0;
+	color: #000;
+	font-style: italic;
+	font-weight: bold;
 }
 
-code {
-	padding: 0.2em;
+/* = 5. Links ============================================================== */
+
+a:link {
+	color: #e33;
+	text-decoration: none;
 }
 
-/*
- * Redeclare monospace font family: h5bp.com/j
- */
-
-pre,
-code,
-tt,
-kbd,
-samp {
-	font-family: Monaco, 'Ubuntu Mono', Consolas, 'Courier New', monospace;
-    font-size: 1em;
+a:visited {
+	color: #933;
 }
 
-/*
- * Improve readability of pre-formatted text
- */
-
-pre {
-    white-space: pre;
-    white-space: pre-wrap;
-    word-wrap: break-word;
+a:hover,
+a:active {
+	color: #f44;
 }
 
-q {
-    quotes: none;
+a:focus {
+	outline: thin dotted;
 }
 
-q:before,
-q:after {
-    content: "";
-    content: none;
-}
-
-small {
-    font-size: 85%;
-}
-
-/*
- * Position subscript and superscript content without affecting line-height: h5bp.com/k
- */
-
-sub,
-sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
-}
-
-sup {
-    top: -0.5em;
-}
-
-sub {
-    bottom: -0.25em;
+a:hover,
+a:active {
+	outline: 0;
 }
 
 
-/* =============================================================================
-   Lists
-   ========================================================================== */
+/* = 6. Lists ============================================================== */
 
 ul,
 ol {
-    margin: 1em 0;
-    padding: 0 0 0 40px;
+	margin: 1em 0;
+	padding: 0 0 0 40px;
 }
 
 dd {
-    margin: 0 0 0 40px;
+	margin: 0 0 0 40px;
 }
 
 nav ul,
 nav ol {
-    list-style: none;
-    list-style-image: none;
-    margin: 0;
-    padding: 0;
+	list-style: none;
+	list-style-image: none;
+	margin: 0;
+	padding: 0;
 }
 
 
-/* =============================================================================
-   Embedded content
-   ========================================================================== */
+/* = 7. Embedded Content =================================================== */
 img {
 	max-width: 100%;
-    vertical-align: middle;
-    -ms-interpolation-mode: bicubic;
+	vertical-align: middle;
+	-ms-interpolation-mode: bicubic;
 }
 
-svg:not(:root) {
-    overflow: hidden;
-}
-
-
-/* =============================================================================
-   Forms
-   ========================================================================== */
-label {
-    cursor: pointer;
-}
-
-legend {
-    white-space: normal;
-    *margin-left: -7px;
-}
-
-/*
- * 1. Correct font-size not inheriting in all browsers
- * 2. Remove margins in FF3/4 S5 Chrome
- * 3. Define consistent vertical alignment display in all browsers
- */
-
-button,
-input,
-select,
-textarea {
-    font-size: 100%;
-    vertical-align: baseline;
-    *vertical-align: middle;
-}
-
-/*
- * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
- */
-
-button,
-input {
-    line-height: normal;
-}
-
-/*
- * 1. Display hand cursor for clickable form elements
- * 2. Allow styling of clickable form elements in iOS
- * 3. Correct inner spacing displayed oddly in IE7 (doesn't effect IE6)
- */
-
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-    cursor: pointer;
-    -webkit-appearance: button;
-    *overflow: visible;
-}
-
-/*
- * Re-set default cursor for disabled elements
- */
-
-button[disabled],
-input[disabled] {
-    cursor: default;
-}
-
-/*
- * Consistent box sizing and appearance
- */
-
-input[type="checkbox"],
-input[type="radio"] {
-    -ms-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    *width: 13px;
-    *height: 13px;
-}
-
-input[type="search"] {
-    -webkit-appearance: textfield;
-    -ms-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    -webkit-box-sizing: content-box;
-    box-sizing: content-box;
-}
-
-input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-cancel-button {
-    -webkit-appearance: none;
-}
-
-/*
- * Remove inner padding and border in FF3/4: h5bp.com/l
- */
-
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-    border: 0;
-    padding: 0;
-}
-
-/*
- * 1. Remove default vertical scrollbar in IE6/7/8/9
- * 2. Allow only vertical resizing
- */
-
-textarea {
-    overflow: auto;
-    vertical-align: top;
-    resize: vertical;
+html.lt-ie9 svg {
+	overflow: hidden;
 }
 
 
-/* =============================================================================
-   Tables
-   ========================================================================== */
+/* = 8. Tables ============================================================= */
 
 table {
 	width: 100%;
-    border-collapse: collapse;
-    border-spacing: 0;
-	margin: 20px 0 40px;
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: 1em 0 2em;
 }
 	thead {
-		background: #dcdcdc;
+		text-transform: uppercase;
+		font-size: .7em;
+		line-height: 2;
+		color: #999;
 	}
 		th {
 			font-weight: bold;
+		}
+	tr {
+		border-top: 1px solid #222;
+	}
+		thead tr {
+			border: 0;
+			border-bottom: 2px solid #222;
 		}
 
 	td, th {
@@ -441,36 +290,13 @@ table {
 		vertical-align: top;
 	}
 
-	td:first-child,
-	th:first-child {
-		padding: .25em 0 .25em 1em;
-	}
-
-	td:last-child,
-	th:last-child {
-		padding: .25em 1em .25em 0;
-	}
-
 caption {
 	font-size: 1.2em;
-	font-family: 'Fjord One', Georgia, serif;
-}
-
-/* =============================================================================
-   Chrome Frame Prompt
-   ========================================================================== */
-
-.chromeframe {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
 }
 
 
-/* =============================================================================
-   Common Blocks
-   ========================================================================== */
+/* = 9. Layout ============================================================= */
+
 .header, .torso, .footer {
 	position: relative;
 }
@@ -480,10 +306,10 @@ caption {
 }
 
 .header a {
-	color: #333;
+	color: #eee;
 }
 	.header a:hover {
-		color: #F2006D;
+		color: #e33;
 	}
 
 .nav_primary {
@@ -501,308 +327,296 @@ caption {
 }
 
 .footer {
-	background-color: #282828;
-	color: #FAFAFA;
 	margin-top: 100px;
-	padding: 30px 0;
 }
 
+
+/* = 10. Messaging ========================================================= */
+
 .highlight {
-	color: #181818;
-	font-family: 'Fjord One', Georgia, serif;
+	color: #fff;
 	font-size: 2.5em; /* 40px / 16px */
 	margin: 0 0 1.8em;
 	padding-bottom: 1.5em;
 }
 
-.error,
-.info,
-.success {
+.error, .info, .success {
 	margin: 1.5em 0;
 	padding: 1em;
+	box-shadow: inset 0 0 2em #000;
+}
+.error a, .info a, .success a {
+	color: inherit;
+	text-decoration: underline;
 }
 
-p.error,
-p.info,
-p.success,
-.error p,
-.info p,
-.success p {
+div.error, div.info, div.success, p.error, p.info, p.success {
 	color: #FFF;
-	font-size: 1.125em;
-	font-weight: bold;
 	margin: 1em 0;
-	text-shadow: 1px 1px 0 rgba(0,0,0,0.15);
 }
-.error ul,
-.info ul,
-.success ul {
-	color: #FFF;
-	margin: 0.6em 0 0;
-	padding: 0 0 0 2em;
-	text-shadow: 1px 1px 0 rgba(0,0,0,0.1)
-}
-.success {
-	background: #5acc64;
-	border: 6px solid #49b953;
-	color: #50a12c;
-}
-.error {
-	background: #db3131;
-	border: 6px solid #cb2525;
-}
-.info {
-	background: #F2006D;
-	border: 6px solid #dc0063;
-	color: #008eb8;
-}
-.error p,
-.error li,
-.info p,
-.info li,
-.success p,
-.success li {
+
+.success { background: #690; }
+.error { background: #c00; }
+.info { background: #09c; }
+
+.error p, .error li, .info p, .info li, .success p, .success li {
 	margin: 0;
 }
 
 
-/* ------------------------------------------------------------ */
-/* forms
-/* ------------------------------------------------------------ */
+/* = 11. Non-semantic Classes ============================================== */
+.visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+.group:before,
+.group:after {
+	content: "";
+	display: table;
+}
+
+.group:after {
+	clear: both;
+}
+
+html.lt-ie8 .group {
+	zoom: 1;
+}
+
+
+/* = 12. Forms ============================================================= */
+
+label {
+	cursor: pointer;
+}
+
+legend {
+	white-space: normal;
+}
+html.lt-ie8 legend {
+	margin-left: -7px;
+}
+
+button,
+input,
+select,
+textarea {
+	font-size: 100%;
+	vertical-align: baseline;
+}
+html.lt-ie8 button,
+html.lt-ie8 input,
+html.lt-ie8 select,
+html.lt-ie8 textarea {
+	vertical-align: middle;
+}
+
+button,
+input {
+	line-height: normal;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	cursor: pointer;
+	-webkit-appearance: button;
+}
+html.lt-ie8 button,
+html.lt-ie8 input[type="button"],
+html.lt-ie8 input[type="reset"],
+html.lt-ie8 input[type="submit"] {
+	overflow: visible;
+}
+
+button[disabled],
+input[disabled] {
+	cursor: default;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	-ms-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+html.lt-ie8 input[type="checkbox"],
+html.lt-ie8 input[type="radio"] {
+	width: 13px;
+	height: 13px;
+}
+
+input[type="search"] {
+	-webkit-appearance: textfield;
+	-ms-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+	-webkit-appearance: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+textarea {
+	overflow: auto;
+	vertical-align: top;
+	resize: vertical;
+}
 
 form h4 {
 	margin: 0 0 0.4em;
 }
 form label {
-	color: #333;
 	display: block;
-	font-size: 0.875em; /* 14px / 16px */
+	text-transform: uppercase;
+	font-size: .7em;
+	line-height: 2;
+	color: #999;
 	font-weight: bold;
-	margin: 0 0 3px;
+	margin: 0 1em;
 }
+	.radio label,
+	.checkbox label {
+		display: inline;
+		text-transform: none;
+		font-size: 1em;
+		line-height: 1;
+		color: #fff;
+		font-weight: normal;
+		margin: 0;
+	}
+
 	span.required {
-		color: #ac181b;
+		color: #e33;
 	}
-	.help {
-		font-style: italic;
-		margin: 0.4em 0 0;
+
+	fieldset .help {
+		color: #999;
+		font-size: .75em;
+		margin: 0 1em;
 	}
-fieldset {
-	margin: 0 0 18px;
-}
-.text,
-.password,
-.entry,
-.file,
-.checkboxes,
-.select,
-.radios,
-.textarea,
-.validation,
-.submit {
-	margin-bottom: 32px;
+
+.text, .password, .entry, .file, .checkboxes, .select, .radios, .textarea, .validation, .submit {
+	margin-bottom: 1em;
 }
 	.validation .text {
-		margin-top: 12px;
+		margin-top: 1em;
 	}
+
 .text input,
 .password input,
 .textarea textarea {
-	background-color: #FFF;
-	border-width: 1px;
-	border-color: #848484 #C1C1C1 #E1E1E1;
-	border-radius: 2px;
-	border-style: solid;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-	color: #333;
 	display: block;
-	font-size: 14px; /* 14px / 16px */
-	height: 2.8em;
-	margin: 2px 0 0;
-	padding: 0.6em 0.7em;
 	width: 100%;
-}
-.text input:focus,
-.password input:focus,
-.textarea textarea:focus {
-	background-color: #F6F6F6;
+	background: #000;
+	box-shadow: inset 0 0 2em #111;
+	border: 0;
+	height: 2.8em;
+	margin: .25em 0;
+	padding: 0 .5em;
 }
 .textarea textarea {
 	height: 12em;
 }
+button,
+.button input,
 .submit input {
+	float: left;
 	border: 0;
-	display: block;
-	background: #0096D2;
+	background: #333;
 	color: #FFFFFF;
 	cursor: pointer;
-	font-family: Arial, sans-serif;
+	font-family: 'Ubuntu', 'Trebuchet MS', arial, sans-serif;
 	font-weight: bold;
-	height: 42px;
-	line-height: 42px;
+	height: 3em;
+	line-height: 3;
 	padding: 0 1em;
-	text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
-	border-radius: 3px;
+	border-radius: .25em;
+	text-transform: uppercase;
+	-webkit-transition: background-color 250ms;
 }
+button:hover,
+.button input:hover,
 .submit input:hover {
-	background: #F2006D;
+	background: #e33;
 	cursor: pointer;
 }
 
 
-/* ===== non-semantic helper classes ========================================
-   Please define your styles before this section.
-   ========================================================================== */
-
-/*
- * Image replacement
- */
-
-.ir {
-    border: 0;
-    font: 0/0 a;
-    text-shadow: none;
-    color: transparent;
-    background-color: transparent;
-}
-
-/*
- * Hide from both screenreaders and browsers: h5bp.com/u
- */
-
-.hidden {
-    display: none !important;
-    visibility: hidden;
-}
-
-/*
- * Hide only visually, but have it available for screenreaders: h5bp.com/v
- */
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-/*
- * Extends the .visuallyhidden class to allow the element to be focusable
- * when navigated to via the keyboard: h5bp.com/p
- */
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
-
-/*
- * Hide visually and from screenreaders, but maintain layout
- */
-
-.invisible {
-    visibility: hidden;
-}
-
-/*
- * Contain floats: h5bp.com/q
- */
-
-.group:before,
-.group:after {
-    content: "";
-    display: table;
-}
-
-.group:after {
-    clear: both;
-}
-
-.group {
-    *zoom: 1;
-}
-
-
-/* ==|== print styles =======================================================
-   Print styles.
-   Inlined to avoid required HTTP connection: h5bp.com/r
-   ========================================================================== */
+/* = 13. Print Styles ====================================================== */
 
 @media print {
-    * {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster: h5bp.com/s */
-        box-shadow:none !important;
-        text-shadow: none !important;
-    }
+	* {
+		background: transparent !important;
+		color: #000 !important; /* Black prints faster: h5bp.com/s */
+		box-shadow: none !important;
+		text-shadow: none !important;
+	}
 
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
+	a,
+	a:visited {
+		text-decoration: underline;
+	}
 
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
+	a[href]:after {
+		content: " (" attr(href) ")";
+	}
 
-    abbr[title]:after,
- 	acronym[title]:after {
-        content: " (" attr(title) ")";
-    }
+	abbr[title]:after,
+	acronym[title]:after {
+		content: " (" attr(title) ")";
+	}
 
-    /*
-     * Don't show links for images, or javascript/internal links
-     */
+	a[href^="javascript:"]:after,
+	a[href^="#"]:after {
+		content: "";
+	}
 
-    .ir a:after,
-    a[href^="javascript:"]:after,
-    a[href^="#"]:after {
-        content: "";
-    }
+	pre,
+	blockquote {
+		border: 1px solid #999;
+		page-break-inside: avoid;
+	}
 
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
+	thead {
+		display: table-header-group;
+	}
 
-    thead {
-        display: table-header-group; /* h5bp.com/t */
-    }
+	tr,
+	img {
+		page-break-inside: avoid;
+	}
 
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
+	@page {
+		margin: 0.5cm;
+	}
 
-    img {
-        max-width: 100% !important;
-    }
+	p,
+	h2,
+	h3 {
+		orphans: 3;
+		widows: 3;
+	}
 
-    @page {
-        margin: 0.5cm;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
+	h2,
+	h3 {
+		page-break-after: avoid;
+	}
 }
