@@ -498,11 +498,17 @@ div.error, div.info, div.success, p.error, p.info, p.success {
 	width: 1px;
 }
 
-.lt-ie8-only {
+.lt-ie7-only, .ie7-only {
 	display: none;
 }
-html.lt-ie8 .lt-ie8-only {
-	display: inherit;
+html.lt-ie7 .lt-ie7-only {
+	display: block;
+}
+html.lt-ie8 .ie7-only {
+	display: block;
+}
+html.lt-ie7 .ie7-only {
+	display: none;
 }
 
 .group:before,
