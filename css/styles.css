@@ -231,19 +231,12 @@ a:active {
 ul,
 ol {
 	margin: 1em 0;
-	padding: 0 0 0 40px;
+	padding-left: 2em;
+	list-style: square;
 }
 
 dd {
-	margin: 0 0 0 40px;
-}
-
-nav ul,
-nav ol {
-	list-style: none;
-	list-style-image: none;
-	margin: 0;
-	padding: 0;
+	margin-left: 2em;
 }
 
 
@@ -305,22 +298,152 @@ caption {
 	font-size: 2em;
 }
 
-.header a {
-	color: #eee;
+.header a,
+.header a:hover {
+	color: #fff;
 }
-	.header a:hover {
-		color: #e33;
-	}
 
-.nav_primary {
-	position: absolute;
-	bottom: -1em;
-	right: 0;
+.nav {
+	border-bottom: 1px solid #222;
+	clear: both;
+	height: 2em;
 }
-	.nav_primary a {
-		display: inline-block;
-		padding: 1em;
+	.nav.primary {
+		border-bottom: 1px solid #e33;
+		height: 3em;
+		border-top: 1px solid #222;
 	}
+	.nav a,
+	.nav a:hover {
+		display: inline-block;
+		position: relative;
+		padding: .5em 1em;
+		float: left;
+		line-height: 1;
+		-webkit-transition: border-color 250ms, background-color 250ms;
+		color: #fff;
+	}
+		.nav.primary a {
+			padding: 1em;
+			border-bottom: .25em solid transparent;
+			padding-bottom: .75em;
+		}
+	.nav a:before,
+	.nav .menu a:first-child:before {
+		z-index: 1;
+		content: '';
+		display: block;
+		position: absolute;
+		border-right: 1px solid #222;
+		height: 1em;
+		font-size: 1em;
+		left: 0;
+		top: 50%;
+		margin-top: -.5em;
+	}
+		.nav > a:first-child:before,
+		.nav .menu a:before	{
+			border: 0;
+		}
+	
+		.primary.nav a:hover {
+			border-color: #e33;
+		}
+		.secondary.nav a:hover,
+		.tertiary.nav a:hover {
+			background: #222;
+		}
+
+	.menu {
+		float: left;
+		height: 2em;
+		overflow: hidden;
+		position: relative;
+		z-index: 1;
+	}
+		.primary .menu {
+			height: 3em;
+			z-index: 2;
+		}
+		.menu.more {
+			float: right;
+		}
+			.menu a:hover {
+				background: #222;
+			}
+			.menu a:first-child:after {
+				content: '';
+				display: block;
+				position: absolute;
+				border-top: .5em solid transparent;
+				border-right: .5em solid #222;
+				border-bottom: .5em solid #222;
+				border-left: .5em solid transparent;
+				font-size: 1em;
+				right: 0;
+				bottom: 0;
+			}
+				.primary .menu a:first-child:after {
+					border-color: transparent #e33 #e33 transparent;
+				}
+			.menu a:last-child:after {
+				content: '';
+				display: block;
+				position: absolute;
+				border-top: .5em solid transparent;
+				border-right: .5em solid #222;
+				border-bottom: .5em solid #222;
+				border-left: .5em solid transparent;
+				font-size: 1em;
+				right: 0;
+				bottom: 0;
+				-webkit-transition: border-color 250ms;
+			}
+				.primary .menu a:last-child:after {
+					border-color: transparent #e33 #e33 transparent;
+				}
+				.menu:hover a:first-child:after {
+					border-color: transparent;
+				}
+				.menu a:hover:after {
+				}
+		.menu:hover {
+			overflow: visible;
+		}
+		.menu a,
+		.nav .menu a {
+			float: none;
+			display: block;
+			padding: .5em 1em;
+			line-height: 1;
+			background: #111;
+			border: 1px solid #222;
+			border-width: 0 1px;
+		}
+			.primary .menu a {
+				padding: 1em;
+				border-color: #e33;
+			}
+			.menu a:first-child {
+				border: 0;
+			}
+			.menu:after {
+				content: '';
+				display: block;
+				border-bottom: 1px solid #222;
+			}
+			.primary .menu:after {
+				border-color: #e33;
+			}
+			.menu a:hover,
+			.nav .menu a:hover {
+				background: #111;
+				cursor: default;
+			}
+				.menu a[href]:hover {
+					background: #222;
+					cursor: pointer;
+				}
 
 .torso {
 	padding: 40px 0;
@@ -343,7 +466,6 @@ caption {
 .error, .info, .success {
 	margin: 1.5em 0;
 	padding: 1em;
-	box-shadow: inset 0 0 2em #000;
 }
 .error a, .info a, .success a {
 	color: inherit;
@@ -374,6 +496,13 @@ div.error, div.info, div.success, p.error, p.info, p.success {
 	padding: 0;
 	position: absolute;
 	width: 1px;
+}
+
+.lt-ie8-only {
+	display: none;
+}
+html.lt-ie8 .lt-ie8-only {
+	display: inherit;
 }
 
 .group:before,
