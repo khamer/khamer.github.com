@@ -1,17 +1,18 @@
 /* = Table of Contents =====================================================
- * 1. Web Fonts
- * 2. Reset
- * 3. Headings
- * 4. Typography
- * 5. Links
- * 6. Lists
- * 7. Embedded Content
- * 8. Tables
- * 9. Layout
+ * 1.  Web Fonts
+ * 2.  Reset
+ * 3.  Headings
+ * 4.  Typography
+ * 5.  Links
+ * 6.  Lists
+ * 7.  Embedded Content
+ * 8.  Tables
+ * 9.  Layout
  * 10. Messaging
  * 11. Non-semantic Classes
  * 12. Forms
- * 13. Print Styles
+ * 13. Navigation
+ * 14. Print Styles
 /* ========================================================================= */
 
 /* = 1. Web Fonts ========================================================== */
@@ -56,7 +57,6 @@ audio:not([controls]) {
 html {
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
-	background: #fff;
 }
 
 body {
@@ -73,30 +73,35 @@ html.lt-ie7 body {
 }
 
 blockquote, html, button, input[type=text], input[type=password], textarea, select, caption {
-	font-family: 'Ubuntu', 'Trebuchet MS', arial, sans-serif;
-	background: #111;
-	color: #eee;
+	font-family: Arial, Helvetica, sans-serif;
+	background: #fff;
+	color: #000;
 }
 
 ::-moz-selection {
-	background: #433;
+	background: #bbb;
 	text-shadow: none;
 }
 
 ::selection {
-	background: #433;
+	background: #bbb;
 	text-shadow: none;
 }
 
 
 /* = 3. Headings =========================================================== */
 
+header h1 a:link,
+header h1 a:visited {
+	color: #f2006d;
+}
+
 h1, h2, h3, h4, h5, h6 {
-	color: #e33;
-	font-family: 'Ubuntu Light', 'Ubuntu', 'Trebuchet MS', arial, sans-serif;
-	font-weight: 300;
-	line-height: 1.3;
+	line-height: 1.4;
 	margin: 0 0 1em;
+}
+h1, h2, h3 {
+	font-family: 'Fjord One', Georgia, serif;
 }
 h1 {
 	font-size: 3.25em; /* 52px / 16px */
@@ -136,7 +141,7 @@ pre {
 	blockquote {
 		font-style: italic;
 		font-size: 1.25em;
-		border-left: 1em solid #000;
+		border-left: 1px dotted;
 	}
 		blockquote p {
 			margin: 1em 0;
@@ -152,7 +157,7 @@ code {
 }
 
 pre, code, tt, kbd, samp {
-	font-family: Monaco, 'Ubuntu Mono', Consolas, 'Courier New', monospace;
+	font-family: Menlo, 'Ubuntu Mono', Consolas, 'Courier New', monospace;
 }
 
 p {
@@ -175,26 +180,26 @@ dfn {
 
 hr {
 	display: block;
-	height: 1em;
+	height: 1px;
 	border: 0;
-	background: #000;
-	width: 20em;
-	max-width: 80%;
+	background: #999;
+	margin: 3em auto;
+	width: 80%;
 }
 
 ins {
-	background: #ff9;
+	background: #9f9;
 	color: #000;
 	text-decoration: none;
 }
 
 del {
-	background: #fba;
+	background: #f99;
 	text-decoration: line-through;
 }
 
 mark {
-	background: #ff0;
+	background: #ff3;
 	color: #000;
 	font-style: italic;
 	font-weight: bold;
@@ -203,17 +208,17 @@ mark {
 /* = 5. Links ============================================================== */
 
 a:link {
-	color: #e33;
+	color: #0096d2;
 	text-decoration: none;
 }
 
 a:visited {
-	color: #933;
+	color: #0096d2;
 }
 
 a:hover,
 a:active {
-	color: #f44;
+	color: #f2006d;
 }
 
 a:focus {
@@ -261,20 +266,18 @@ table {
 	margin: 1em 0 2em;
 }
 	thead {
-		text-transform: uppercase;
-		font-size: .7em;
 		line-height: 2;
-		color: #999;
+		color: #333;
 	}
 		th {
 			font-weight: bold;
+			line-height: 1.2;
 		}
 	tr {
-		border-top: 1px solid #222;
 	}
 		thead tr {
 			border: 0;
-			border-bottom: 2px solid #222;
+			border-bottom: 1px solid #999;
 		}
 
 	td, th {
@@ -290,174 +293,32 @@ caption {
 
 /* = 9. Layout ============================================================= */
 
-.header, .torso, .footer {
+body > header,
+body > .torso,
+body > footer {
 	position: relative;
 }
 
-.header h1 {
+body > header h1 {
 	font-size: 2em;
 }
 
-.header a,
-.header a:hover {
-	color: #fff;
-}
-
-.nav {
-	border-bottom: 1px solid #222;
-	clear: both;
-	height: 2em;
-}
-	.nav.primary {
-		border-bottom: 1px solid #e33;
-		height: 3em;
-		border-top: 1px solid #222;
-	}
-	.nav a,
-	.nav a:hover {
-		display: inline-block;
-		position: relative;
-		padding: .5em 1em;
-		float: left;
-		line-height: 1;
-		-webkit-transition: border-color 250ms, background-color 250ms;
-		color: #fff;
-	}
-		.nav.primary a {
-			padding: 1em;
-			border-bottom: .25em solid transparent;
-			padding-bottom: .75em;
-		}
-	.nav a:before,
-	.nav .menu a:first-child:before {
-		z-index: 1;
-		content: '';
-		display: block;
-		position: absolute;
-		border-right: 1px solid #222;
-		height: 1em;
-		font-size: 1em;
-		left: 0;
-		top: 50%;
-		margin-top: -.5em;
-	}
-		.nav > a:first-child:before,
-		.nav .menu a:before	{
-			border: 0;
-		}
-	
-		.primary.nav a:hover {
-			border-color: #e33;
-		}
-		.secondary.nav a:hover,
-		.tertiary.nav a:hover {
-			background: #222;
-		}
-
-	.menu {
-		float: left;
-		height: 2em;
-		overflow: hidden;
-		position: relative;
-		z-index: 1;
-	}
-		.primary .menu {
-			height: 3em;
-			z-index: 2;
-		}
-		.menu.more {
-			float: right;
-		}
-			.menu a:hover {
-				background: #222;
-			}
-			.menu a:first-child:after {
-				content: '';
-				display: block;
-				position: absolute;
-				border-top: .5em solid transparent;
-				border-right: .5em solid #222;
-				border-bottom: .5em solid #222;
-				border-left: .5em solid transparent;
-				font-size: 1em;
-				right: 0;
-				bottom: 0;
-			}
-				.primary .menu a:first-child:after {
-					border-color: transparent #e33 #e33 transparent;
-				}
-			.menu a:last-child:after {
-				content: '';
-				display: block;
-				position: absolute;
-				border-top: .5em solid transparent;
-				border-right: .5em solid #222;
-				border-bottom: .5em solid #222;
-				border-left: .5em solid transparent;
-				font-size: 1em;
-				right: 0;
-				bottom: 0;
-				-webkit-transition: border-color 250ms;
-			}
-				.primary .menu a:last-child:after {
-					border-color: transparent #e33 #e33 transparent;
-				}
-				.menu:hover a:first-child:after {
-					border-color: transparent;
-				}
-				.menu a:hover:after {
-				}
-		.menu:hover {
-			overflow: visible;
-		}
-		.menu a,
-		.nav .menu a {
-			float: none;
-			display: block;
-			padding: .5em 1em;
-			line-height: 1;
-			background: #111;
-			border: 1px solid #222;
-			border-width: 0 1px;
-		}
-			.primary .menu a {
-				padding: 1em;
-				border-color: #e33;
-			}
-			.menu a:first-child {
-				border: 0;
-			}
-			.menu:after {
-				content: '';
-				display: block;
-				border-bottom: 1px solid #222;
-			}
-			.primary .menu:after {
-				border-color: #e33;
-			}
-			.menu a:hover,
-			.nav .menu a:hover {
-				background: #111;
-				cursor: default;
-			}
-				.menu a[href]:hover {
-					background: #222;
-					cursor: pointer;
-				}
-
-.torso {
+body > .torso {
 	padding: 40px 0;
 }
 
-.footer {
+body > footer {
 	margin-top: 100px;
+	color: #999;
+	font-size: 14px;
+	text-align: center;
 }
 
 
 /* = 10. Messaging ========================================================= */
 
 .highlight {
-	color: #fff;
+	font-family: 'Fjord One', Georgia, serif;
 	font-size: 2.5em; /* 40px / 16px */
 	margin: 0 0 1.8em;
 	padding-bottom: 1.5em;
@@ -620,26 +481,19 @@ form h4 {
 }
 form label {
 	display: block;
-	text-transform: uppercase;
-	font-size: .7em;
-	line-height: 2;
-	color: #999;
+	color: #333;
+	font-size: .875em;
 	font-weight: bold;
-	margin: 0 1em;
+	margin: 0 0 3px;
 }
 	.radio label,
 	.checkbox label {
 		display: inline;
-		text-transform: none;
-		font-size: 1em;
-		line-height: 1;
-		color: #fff;
 		font-weight: normal;
-		margin: 0;
 	}
 
 	span.required {
-		color: #e33;
+		color: #ac181b;
 	}
 
 	fieldset .help {
@@ -660,42 +514,103 @@ form label {
 .textarea textarea {
 	display: block;
 	width: 100%;
-	background: #000;
-	box-shadow: inset 0 0 2em #111;
-	border: 0;
-	height: 2.8em;
-	margin: .25em 0;
-	padding: 0 .5em;
+	margin: 2px 0 0;
+	padding: 0.6em 0.7em;
+	border-color: #848484 #c1c1c1 #e1e1e1;
+	border-radius: 2px;
+	border-style: solid;
+	border-width: 1px;
+	color: #333;
+	font-size: 14px;
 }
 .textarea textarea {
 	height: 12em;
 }
 button,
-.button input,
-.submit input {
-	float: left;
-	border: 0;
-	background: #333;
-	color: #FFFFFF;
-	cursor: pointer;
-	font-family: 'Ubuntu', 'Trebuchet MS', arial, sans-serif;
-	font-weight: bold;
-	height: 3em;
-	line-height: 3;
-	padding: 0 1em;
-	border-radius: .25em;
-	text-transform: uppercase;
-	-webkit-transition: background-color 250ms;
+input[type=button],
+input[type=reset],
+input[type=submit],
+.button a,
+a.button {
+	background: #0394CD;
+	background: -moz-linear-gradient(top, #0394cd 0%, #0174b5 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0394cd), color-stop(100%,#0174b5));
+	background: -webkit-linear-gradient(top, #0394cd 0%,#0174b5 100%);
+	background: -o-linear-gradient(top, #0394cd 0%,#0174b5 100%);
+	background: -ms-linear-gradient(top, #0394cd 0%,#0174b5 100%);
+	background: linear-gradient(to bottom, #0394cd 0%,#0174b5 100%);
+	border: none;
+	color: #fff;
+	display: inline-block;
+	font-family: 'Fjord One', Georgia, serif;
+	padding: 0.4em 0.8em;
+	text-align: center;
 }
 button:hover,
-.button input:hover,
-.submit input:hover {
-	background: #e33;
+input[type=button]:hover,
+input[type=reset]:hover,
+input[type=submit]:hover,
+.button a:hover,
+a.button:hover {
+	background: #0084b8;
 	cursor: pointer;
 }
 
 
-/* = 13. Print Styles ====================================================== */
+/* = 13. Navigation ======================================================== */
+
+header > nav {
+	display: block;
+}
+	header > nav:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+	nav a {
+		display: inline-block;
+		float: left;
+	}
+
+nav.utility {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	text-align: right;
+}
+	nav.utility a {
+		float: none;
+		font-size: .9em;
+		padding: 18px 5px 5px;
+	}
+
+nav.primary {
+	background: #333;
+	font-size: 1.3em;
+	font-family: 'Fjord One', Georgia, serif;
+}
+	nav.primary a {
+		color: #fff;
+		padding: 8px 15px;
+	}
+	nav.primary a:hover {
+		background: #0096d2;
+	}
+nav.secondary {
+	font-size: .9em;
+	//font-family: 'Fjord One', Georgia, serif;
+	background: #666;
+}
+	nav.secondary a {
+		padding: 5px 15px;
+		color: #fff;
+	}
+		nav.secondary a:hover {
+			background: #555;
+		}
+
+/* = 14. Print Styles ====================================================== */
 
 @media print {
 	* {

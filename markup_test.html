@@ -5,37 +5,32 @@
 <!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
 	<head>
 		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<title>iMarc HTML Content Tester</title>
 		<meta name="description" content="iMarc, LLC" />
-		<meta name="credits" content="Design, programming, by iMarc. More info at http://imarc.net" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="author" content="Design, programming, by iMarc. More info at http://imarc.net" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" type="text/css" href="css/styles.css" media="all" />
+		<link href="http://fonts.googleapis.com/css?family=Fjord+One" rel="stylesheet" type="text/css">
 	</head>
 	<body>
-		<div class="header">
+		<header>
 			<h1><a href="/">iMarc Header</a></h1>
-			<div class="nav primary">
+			<nav class="utility">
+				<a href="#">Home</a>
+				<a href="#">Utility 1</a>
+				<a href="#">Utility 2</a>
+				<a href="#">Log In</a>
+			</nav>
+			<nav class="primary">
 				<a href="http://becauserobots.com/">BecauseRobots</a>
 				<a href="https://github.com/imarc">GitHub</a>
 				<a href="http://www.imarc.net/">imarc.net</a>
-				<div class="more menu">
-					<a href="#">Contact</a>
-					<a href="#">Twitter</a>
-					<a href="#">LinkedIn</a>
-				</div>
-			</div>
-			<div class="nav secondary">
+			</nav>
+			<nav class="secondary">
 				<a href="#next">Next</a>
 				<a href="#previous">Previous</a>
-				<div class="more menu">
-					<a>Jump to</a>
-					<a href="#">Article 1</a>
-					<a href="#">Article 2</a>
-					<a href="#">Article 3</a>
-				</div>
-			</div>
-		</div>
+			</nav>
+		</header>
 		<div class="torso">
 			<h1>iMarc HTML Content Tester</h1>
 
@@ -97,13 +92,14 @@
 				<strong>strong</strong>,
 				<em>em</em>,
 				<code>code</code>,
-				<tt>tt</tt>,
 				<span>span (no class here, so you probably shouldn't see any styling)</span>,
 				<a href="http://www.imarc.net">a (link)</a>,
 				<abbr title="Abbreviation">abbr</abbr>,
-				<acronym title="Acronym">acronym</acronym>,
 				<sup>sup</sup>,
-				<sub>sub</sub>.
+				<sub>sub</sub>,
+				<ins>ins</ins>,
+				<del>del</del>,
+				<mark>mark</mark>.
 			</p>
 
 	<pre>
@@ -325,7 +321,7 @@
 
 			<h2>Forms</h2>
 
-			<form action="" method="post">
+			<form method="post">
 
 				<fieldset>
 					<h3>Fieldset Heading (don't use a legend)</h3>
@@ -438,8 +434,9 @@
 				This table has a summary, colgroup, thead, tfoot, and tbody.
 			</p>
 
-			<table summary="example table with thead, tfoot, and tbody.">
+			<table>
 				<colgroup>
+					<col />
 					<col />
 					<col />
 				</colgroup>
@@ -475,7 +472,8 @@
 			</p>
 
 
-
+			<h2>Horizontal Breaks</h2>
+			<hr />
 
 
 			<h2>Headings – This is an H2</h2>
@@ -531,8 +529,8 @@
 				velit, ornare sit amet blandit in, mattis eget nulla.
 			</p>
 		</div>
-		<div class="footer">
+		<footer>
 			<div class="copyright">©2012 iMarc LLC.</div>
-		</div>
+		</footer>
 	</body>
 </html>
