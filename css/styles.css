@@ -523,6 +523,8 @@ form label {
 .password input,
 .textarea textarea {
 	display: block;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
 	width: 100%;
 	margin: 2px 0 0;
 	padding: 0.6em 0.7em;
@@ -687,7 +689,7 @@ nav.secondary {
 		min-width: 480px;
 	}
 }
-@media only screen and (min-width: 481px) and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
 	body {
 		min-width: 480px;
 		width: 100%;
@@ -699,11 +701,6 @@ nav.secondary {
 	}
 	body > header h1 {
 		padding: 0 .5em;
-	}
-
-	.text input {
-		margin: 0;
-		padding: 0;
 	}
 }
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
