@@ -551,6 +551,7 @@ a.button {
 	font-family: 'Fjord One', Georgia, serif;
 	padding: 0.4em 0.8em;
 	text-align: center;
+	border-radius: 3px;
 }
 button:hover,
 input[type=button]:hover,
