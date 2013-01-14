@@ -13,6 +13,7 @@
  * 12. Forms
  * 13. Navigation
  * 14. Print Styles
+ * 15. Media Queries
 /* ========================================================================= */
 
 /* = 1. Web Fonts ========================================================== */
@@ -386,6 +387,15 @@ html.lt-ie8 .group {
 	zoom: 1;
 }
 
+.columns {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+}
+	.columns > div {
+		display: table-cell;
+	}
+
 
 /* = 12. Forms ============================================================= */
 
@@ -669,4 +679,34 @@ nav.secondary {
 	h3 {
 		page-break-after: avoid;
 	}
+}
+
+/* = 15. Media Queries ===================================================== */
+@media only screen and (max-width: 480px) {
+	body {
+		min-width: 480px;
+	}
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+	body {
+		min-width: 480px;
+		width: 100%;
+		padding: 1em 0;
+		margin: 0;
+	}
+	body > .torso {
+		padding: 0 1em;
+	}
+	body > header h1 {
+		padding: 0 .5em;
+	}
+
+	.text input {
+		margin: 0;
+		padding: 0;
+	}
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+}
+@media only screen and (min-width: 1025px) {
 }
