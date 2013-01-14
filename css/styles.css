@@ -17,7 +17,7 @@
 /* ========================================================================= */
 
 /* = 1. Web Fonts ========================================================== */
-@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+@import url(http://fonts.googleapis.com/css?family=Fjord+One);
 
 
 /* = 2. Reset ============================================================== */
@@ -545,12 +545,6 @@ input[type=submit],
 .button a,
 a.button {
 	background: #0394CD;
-	background: -moz-linear-gradient(top, #0394cd 0%, #0174b5 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0394cd), color-stop(100%,#0174b5));
-	background: -webkit-linear-gradient(top, #0394cd 0%,#0174b5 100%);
-	background: -o-linear-gradient(top, #0394cd 0%,#0174b5 100%);
-	background: -ms-linear-gradient(top, #0394cd 0%,#0174b5 100%);
-	background: linear-gradient(to bottom, #0394cd 0%,#0174b5 100%);
 	border: none;
 	color: #fff;
 	display: inline-block;
