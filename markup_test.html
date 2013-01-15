@@ -56,12 +56,6 @@
 					Microsoft</a>.
 			</div>
 
-			<p class="highlight">
-				This page contains basic HTML that should render acceptably on any website.
-				It uses basic markup and classes defined by iMarc’s
-				<a href="http://handbook.imarc.net/frontend">frontend standards</a>.
-			</p>
-
 			<p>
 				Filler paragraph – Ignore this. Most of the sections end with a standard
 				paragraph in an un-scoped <code>&lt;p&gt;</code> tag. Hopefully, this
@@ -191,17 +185,6 @@
 			</div>
 
 
-			<h3>Section Paragraph – &lt;p class="section"&gt;</h3>
-
-			<p class="section">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a
-				felis est, nec convallis dui. Nulla lectus velit, ornare sit amet blandit
-				in, mattis eget nulla. Integer tellus ligula, consectetur sed tincidunt
-				nec, tempor in enim. Vestibulum molestie, metus in imperdiet ullamcorper,
-				erat elit ultricies purus.
-			</p>
-
-
 			<h3>Callout Div – A paragraph inside &lt;div class="callout"&gt;</h3>
 
 			<div class="callout">
@@ -214,18 +197,6 @@
 				</p>
 			</div>
 
-
-			<h3>Callout Paragraph – &lt;p class="callout"&gt;</h3>
-
-			<p class="callout">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a
-				felis est, nec convallis dui. Nulla lectus velit, ornare sit amet blandit
-				in, mattis eget nulla. Integer tellus ligula, consectetur sed tincidunt
-				nec, tempor in enim. Vestibulum molestie, metus in imperdiet ullamcorper,
-				erat elit ultricies purus.
-			</p>
-
-
 			<h3>Highlight Div – A paragraph inside &lt;div class="highlight"&gt;</h3>
 
 			<div class="highlight">
@@ -237,18 +208,6 @@
 					erat elit ultricies purus.
 				</p>
 			</div>
-
-
-			<h3>Highlight Paragraph – &lt;p class="highlight"&gt;</h3>
-
-			<p class="highlight">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a
-				felis est, nec convallis dui. Nulla lectus velit, ornare sit amet blandit
-				in, mattis eget nulla. Integer tellus ligula, consectetur sed tincidunt
-				nec, tempor in enim. Vestibulum molestie, metus in imperdiet ullamcorper,
-				erat elit ultricies purus.
-			</p>
-
 
 			<h3>Blockquote – A paragraph inside &lt;blockquote&gt;</h3>
 
@@ -329,6 +288,10 @@
 
 				<fieldset>
 					<h3>Fieldset Heading (don't use a legend)</h3>
+					<p>
+						The following inputs follow their labels, which is best
+						when labels and inputs are on different lines.
+					</p>
 					<div class="text">
 						<label for="sample_form-text">Text<span class="required">*</span></label>
 						<input id="sample_form-text" type="text" />
@@ -338,39 +301,52 @@
 						<label for="sample_form-password">Password<span class="required">*</span></label>
 						<input id="sample_form-password" type="password" />
 					</div>
+					<p>
+						The following inputs are inside their labels, which is
+						best when labels and inputs are on the same line.
+					</p>
+					<label class="text">
+						Text:
+						<input id="sample_form-text" type="text" />
+						<span class="help">only numbers and letters</span>
+					</label>
+					<label class="password">
+						Password:
+						<input id="sample_form-password" type="password" />
+					</label>
 				</fieldset>
 
 				<fieldset>
 					<h3>Another Fieldset</h3>
 					<div class="radios group">
-						<label>Choose one</label>
-						<div class="radio">
+						<h4>Choose one</h4>
+						<label class="radio">
 							<input id="sample_form-radio" type="radio" />
-							<label for="sample_form-radio">radio</label>
-						</div>
-						<div class="radio">
+							radio
+						</label>
+						<label class="radio">
 							<input id="sample_form-radio_1" type="radio" />
-							<label for="sample_form-radio_1">radio 1</label>
-						</div>
-						<div class="radio">
+							radio 1
+						</label>
+						<label class="radio">
 							<input id="sample_form-radio_2" type="radio" />
-							<label for="sample_form-radio_2">radio 2</label>
-						</div>
+							radio 2
+						</label>
 					</div>
 					<div class="checkboxes group">
-						<label>Check all that apply</label>
-						<div class="checkbox">
+						<h4>Check all that apply</h4>
+						<label class="checkbox">
 							<input id="sample_form-checkbox" type="checkbox" />
-							<label for="sample_form-checkbox">checkbox</label>
-						</div>
-						<div class="checkbox">
+							checkbox
+						</label>
+						<label class="checkbox">
 							<input id="sample_form-checkbox_1" type="checkbox" />
-							<label for="sample_form-checkbox_1">checkbox 1</label>
-						</div>
-						<div class="checkbox">
+							checkbox 1
+						</label>
+						<label class="checkbox">
 							<input id="sample_form-checkbox_2" type="checkbox" />
-							<label for="sample_form-checkbox_2">checkbox 2</label>
-						</div>
+							checkbox 2
+						</label>
 					</div>
 					<div class="select">
 						<label for="sample_form-select">Select one</label>
@@ -409,16 +385,25 @@
 					</div>
 				</fieldset>
 
+				<h3>Buttons</h3>
+				<p>
+					These days, we should expect multiple buttons on a row.
+				</p>
 				<fieldset>
-					<h3>Another Fieldset</h3>
 					<div class="button">
-						<input type="button" value="button" />
+						<input type="button" value="Input Button" />
 					</div>
 					<div class="submit">
 						<input type="submit" />
 					</div>
+					<div class="reset">
+						<input type="reset" />
+					</div>
+					<div class="button">
+						<button>Button Tag</button>
+					</div>
+					<a href="#" class="button">Link</a>
 				</fieldset>
-
 			</form>
 
 			<p>

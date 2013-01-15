@@ -120,6 +120,15 @@ h5, h6 {
 	font-size: 1em;
 }
 
+hgroup h1,
+hgroup h2,
+hgroup h3,
+hgroup h4,
+hgroup h5,
+hgroup h6 {
+	margin: 0 inherit;
+}
+
 
 /* = 4. Typography ========================================================= */
 
@@ -131,6 +140,10 @@ acronym[title] {
 b,
 strong {
 	font-weight: bold;
+}
+
+em {
+	font-style: italic;
 }
 
 blockquote,
@@ -157,7 +170,7 @@ code {
 	padding: 0.2em;
 }
 
-pre, code, tt, kbd, samp {
+pre, code, kbd, samp {
 	font-family: Menlo, 'Ubuntu Mono', Consolas, 'Courier New', monospace;
 }
 
@@ -238,6 +251,8 @@ ul,
 ol {
 	margin: 1em 0;
 	padding-left: 2em;
+}
+ul {
 	list-style: square;
 }
 
@@ -317,12 +332,11 @@ body > footer {
 
 
 /* = 10. Messaging ========================================================= */
-
-.highlight {
+.highlight,
+aside {
 	font-family: 'Fjord One', Georgia, serif;
 	font-size: 2.5em; /* 40px / 16px */
 	margin: 0 0 1.8em;
-	padding-bottom: 1.5em;
 }
 
 .error, .info, .success {
@@ -417,6 +431,11 @@ textarea {
 	font-size: 100%;
 	vertical-align: baseline;
 }
+
+select,
+textarea {
+	min-width: 10em;
+}
 html.lt-ie8 button,
 html.lt-ie8 input,
 html.lt-ie8 select,
@@ -496,9 +515,8 @@ form label {
 	font-weight: bold;
 	margin: 0 0 3px;
 }
-	.radio label,
-	.checkbox label {
-		display: inline;
+	label.radio,
+	label.checkbox {
 		font-weight: normal;
 	}
 
@@ -522,10 +540,8 @@ form label {
 .text input,
 .password input,
 .textarea textarea {
-	display: block;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	width: 100%;
 	margin: 2px 0 0;
 	padding: 0.6em 0.7em;
 	border-color: #848484 #c1c1c1 #e1e1e1;
@@ -535,9 +551,22 @@ form label {
 	color: #333;
 	font-size: 14px;
 }
+	div.text input,
+	div.password input,
+	div.textarea textarea {
+		display: block;
+		width: 100%;
+	}
 .textarea textarea {
 	height: 12em;
 }
+
+.button,
+.reset,
+.submit {
+	display: inline;
+}
+
 button,
 input[type=button],
 input[type=reset],
@@ -583,7 +612,6 @@ nav.utility {
 	position: absolute;
 	top: 0;
 	right: 0;
-	left: 0;
 	text-align: right;
 }
 	nav.utility a {
