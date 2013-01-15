@@ -305,7 +305,7 @@ body > header h1 {
 }
 
 body > .torso {
-	padding: 40px 0;
+	padding: 2em 0;
 }
 
 body > footer {
@@ -690,12 +690,6 @@ nav.secondary {
 		width: 100%;
 		padding: 1em 0;
 		margin: 0;
-	}
-	body > .torso {
-		padding: 0 1em;
-	}
-	body > header h1 {
-		padding: 0 .5em;
 	}
 }
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
