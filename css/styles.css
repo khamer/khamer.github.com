@@ -92,7 +92,7 @@ blockquote, html, button, input[type=text], input[type=password], textarea, sele
 
 /* = 3. Headings =========================================================== */
 
-header h1 a:link,
+header h1 a,
 header h1 a:visited {
 	color: #f2006d;
 }
@@ -221,7 +221,7 @@ mark {
 
 /* = 5. Links ============================================================== */
 
-a:link {
+a {
 	color: #0096d2;
 	text-decoration: none;
 }
@@ -349,17 +349,57 @@ aside {
 	text-decoration: underline;
 }
 
-div.error, div.info, div.success, p.error, p.info, p.success {
-	color: #FFF;
+div.error, div.info, div.success {
 	margin: 1em 0;
+	border-radius: 3px;
 }
+	div.error:before,
+	div.info:before,
+	div.success:before {
+		content:'';
+		display: block;
+		float: left;
+		width: 23px;
+		height: 23px;
+		background-position: 0 0;
+		margin: 0 1em 0 0;
+		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAABFCAYAAAChbH1cAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QEQAh0Zl47LzAAAAuJJREFUWMPtmO9H3VEcx9/t5nK5ZNGMy7iJiBgxRkT2YESPNnEf7VHsUUSKnk00MSIuoz9gGqNEbItNjFhGbEYaEc0od5qItteenG87O31/nO+93x5s9eHwdb6f7+uc8zmfz+d8P0f6rwXoBHaAPeBu1vA1/sg+UMwKXOGsTGcBLgK7BnhoTANwDHQ0Cp80sM9Ai+mrmr7lRsAlM1uAp1Z/n2WevjjGlZh3M5KCjftp9dvPs0AuFRzolVTxWOBNScNpZz6bwoJTwX4kwoGKpJ4U8FZJE4lwExwzdez/aJhrujOflFQK+fi69Rzm3/lYUwIdJjiipApMW+4ZJv1RM58yM4iSvKTvpkXJkzOuCfQSLy8t3YEE3YenMzcjzSVsmO1qRQ/XbA1mMoafrAHzQM1Dd16SmoAvksoZny8/JF3TpVwcKUh6IOm5pF1JWG1H0jPzvpAGmpM0IqnmAKNazSS8vE9ufuMJddumpBtxiWm9TnDQ9iJSsuY8Pj6QdF/SeIzOR3cfypKOPeCv7GQa0/469qZTLP2xpIUEnX1JhWYD9zmQX0vaMLp3PByjtznkjIwDB8vdltSe8E1n8PDe0ySBHHjojgVn6CcPs2xYJrzqof81gC952lwe9g7krR3yHxKWGUAXPEyy6o7UJ+kk5oNxo9du3DFK70TS7bClDHsE0XaCzmicre5JOqoztzzy2Yyyyddp4f1pcnurKQJeSDp0QL98NrJe6TKrc004FCg0ZTBI0YR6j/n9XrIC7lL+0SuTbmDkPMAl6/Jh+fTHPwNwC7Dp/PivZAEuAKsOeBcoNQrOAYsOuAZ0ZzHrqgM+dmvQesETIQVWJQtw2H3XRBpAV0R/f0j5Xk0DHgpu3+wy2wSJW38uxt0SueAe4Mj2V+PHdpAEsg4UfMFtIQCArZAg2QLa0pgjD8x5lN3f6r5PBAZjavsj4Faj7lYG3oUEyWBWCSlvPCa7IAkZZOBc8vTFlt90PErGWW5fZgAAAABJRU5ErkJggg==);
+		background-repeat: no-repeat;
+	}
 
-.success { background: #690; }
-.error { background: #c00; }
-.info { background: #09c; }
+	div.error:before {
+		background-position: 0 0;
+	}
+	div.success:before {
+		background-position: 0 -46px;
+	}
+	div.info:before {
+		background-position: 0 -23px;
+	}
+
+div.success {
+	background: #19af55;
+	color: #fff;
+}
+div.error {
+	background: #c21e1e;
+	color: #fff;
+}
+div.info {
+	background: #ccc;
+	color: #000;
+}
 
 .error p, .error li, .info p, .info li, .success p, .success li {
 	margin: 0;
+}
+
+.help {
+	color: #999;
+	font-size: .875em;
+}
+div.help {
+	margin: 0 1em;
 }
 
 
@@ -708,20 +748,32 @@ nav.secondary {
 }
 
 /* = 15. Media Queries ===================================================== */
-@media only screen and (max-width: 480px) {
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
 	body {
 		min-width: 480px;
 	}
 }
-@media only screen and (max-width: 768px) {
+
+/* Landscape phne to portrait tablet */
+@media (max-width: 767px) {
 	body {
 		min-width: 480px;
 		width: 100%;
 		padding: 1em 0;
 		margin: 0;
 	}
+
+	body > .torso {
+		margin: 0 1em;
+	}
 }
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
 }
-@media only screen and (min-width: 1025px) {
+
+/* Large desktop */
+@media (min-width: 980px) {
 }
