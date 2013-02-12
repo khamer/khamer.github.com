@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
     <head>
     	<meta charset="UTF-8" />
-		<title>BecauseRobots</title>
+		<title>khamer.becauserobots.com</title>
 		<meta name="author" content="Created by Kevin Hamer, who currently works at iMarc.net." />
 		<meta name="viewport" content="width=device-width, target-densitydpi=device-dpi" />
 		<link rel="stylesheet" type="text/css" href="http://static.tumblr.com/spftmbk/laxmh00jd/styles.css" media="all" />
@@ -33,13 +33,12 @@
 		</div>
 		<header>
 			<hgroup>
-			<h1><a href="/">Because<b>Robots</b></a></h1>
+			<h1><a href="/">Kevin<b>Hamer</b></a></h1>
 			</hgroup>
 			<nav class="primary">
 				<ul>
-					{block:Pages}
-						<li><a href="{URL}">{Label}</a></li>
-					{/block:Pages}
+					<li><a href="/projects">projects</a></li>
+					<li><a href="/about">about</a></li>
 					<li class="contact">
 						<a href="#">Follow Me</a>
 						<ul class="subnav">
@@ -53,50 +52,29 @@
 		</header>
 
 		<section class="torso">
-			<article class="text {TagsAsClasses}" id="{PostId}">
-				<header>
-					<h2><a href="{Permalink}">{Title}</a></h2>
-				</header>
 
-				<div class="torso">
-					<div>
-						<p>test</p>
-					</div>
-					<div class="meta">
-						{block:Date}
-							<div class="date">
-								<a href="{Permalink}" title="{TimeAgo}">
-									{Month} {DayOfMonth}<br />
-									{Year}
-								</a>
-							</div>
-						{/block:Date}
-						{block:HasTags}
-							<ul class="tags">
-								{block:Tags}
-									<li><a href="{TagURL}">{Tag}</a></li>
-								{/block:Tags}
-							</ul>
-						{/block:HasTags}
-					</div>
-				</div>
-			</article>
+
+
+<article>
+	<header>
+		<h2>
+			<a href="/index.html">khamer.becauserobots.com</a>
+		</h2>
+	</header>
+	<div class="torso">
+		<div>
+			<p>Please see <a href="http://becauserobots.com">BecauseRobots</a> instead.</p>
+
+		</div>
+		
+	</div>
+</article>
+
+
 		</section>
 
 		<footer>
 			<div class="copyright">©2013 Kevin Hamer.</div>
-			{block:Pagination}
-				<nav class="pagination">
-					<ul>
-						{block:PreviousPage}
-							<li><a href="{PreviousPage}">newer</a></li>
-						{/block:PreviousPage}
-						{block:NextPage}
-							<li><a href="{NextPage}">older</a></li>
-						{/block:NextPage}
-					</ul>
-				</nav>
-			{/block:Pagination}
 		</footer>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -106,3 +84,4 @@
 		</script>
 	</body>
 </html>
+

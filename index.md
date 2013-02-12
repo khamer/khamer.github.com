@@ -1,6 +1,6 @@
 ---
-title: BecauseRobots
+title: khamer.becauserobots.com
 layout: default
 ---
 
-test
+Please see [BecauseRobots](http://becauserobots.com) instead.
