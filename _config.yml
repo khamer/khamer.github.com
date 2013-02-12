@@ -1,3 +1,3 @@
 baseurl: /
-markdown: redcarpet
+markdown: rdiscount
 title: Kevin<b>Hamer</b>
