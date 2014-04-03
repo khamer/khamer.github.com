@@ -25,6 +25,13 @@ Red carpet supports ~~strikethrough~~, not sure about Maruku. `2^(nd)`, it suppo
 
 Testing.
 
+```
+This is a multi-line 
+code
+block
+that is handled differently now.
+```
+
 
 This is a newfile
 =================
