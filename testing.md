@@ -17,7 +17,7 @@ This is a comment, kramdown ignores this.
 
 Maruku supports adding [IDs](#){:title="bananas"}
 
-``` ruby
+```ruby
 Redcarpet = Supports.code("blocks like this")
 ```
 
