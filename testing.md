@@ -86,7 +86,6 @@ Hello, **my name** is *Kevin*.
 This is testing for GitHub Flavored Markdown:
 
 perform_complicated_task
-do_this_and_do_that_and_another_thing
 
 And here's some strikethrough from GHFM
 
